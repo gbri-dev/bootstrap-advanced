@@ -12,9 +12,10 @@
       top: 0;
       left: 0;
       background-color: #fff;
+      z-index: 999;
     }
 
-    .sessoes section {
+    .sessoes {
       height: 100vh;
       padding-top: 120px;
     }
@@ -32,25 +33,26 @@
     </header>
     <hr>
     <main class="row">
-      <section class="col-12 menu">
-        <div class="navbar navbar-expand-lg">
-          <h1>Título do site</h1>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <nav class="collapse navbar-collapse justify-content-end" id="menu">
-            <ul class="nav navbar-nav nav-pills">
-              <li class="nav-item"><a class="nav-link active text-bg-dark text-center" href="#">Início</a></li>
-              <li class="nav-item"><a class="nav-link text-center" href="#catalogo">Catálogo</a></li>
-              <li class="nav-item"><a class="nav-link text-center" href="#historia">Historia</a></li>
-              <li class="nav-item"><a class="nav-link text-center" href="#contato">Contato</a></li>
-            </ul>
-          </nav>
+      <div data-bs-spy="scroll" data-bs-target="#menu">
+        <div class="row menu">
+          <div class="navbar navbar-expand-lg">
+            <h1>Título do site</h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="collapse navbar-collapse justify-content-end" id="menu">
+              <ul class="nav navbar-nav nav-pills">
+                <li class="nav-item"><a class="nav-link text-center active" href="#">Início</a></li>
+                <li class="nav-item"><a class="nav-link text-center" href="#catalogo">Catálogo</a></li>
+                <li class="nav-item"><a class="nav-link text-center" href="#historia">Historia</a></li>
+                <li class="nav-item"><a class="nav-link text-center" href="#contato">Contato</a></li>
+              </ul>
+            </nav>
+          </div>
         </div>
-      </section>
-      <hr>
-      <div class="sessoes" data-bs-spy="scroll" data-bs-target="#menu">
-        <section id="catalogo">
+        <hr>
+
+        <section id="catalogo" class="sessoes">
           <div>
             <h2>Catálogo</h2>
             <div class="container">
@@ -75,17 +77,18 @@
           </div>
         </section>
         <hr>
-        <section id="historia">
+        <section id="historia" class="sessoes">
           <div>
             <h2>História</h2>
           </div>
         </section>
         <hr>
-        <section id="contato">
+        <section id="contato" class="sessoes">
           <div>
             <h2>Contato</h2>
           </div>
         </section>
+
       </div>
     </main>
 

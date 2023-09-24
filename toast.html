@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Toast</title>
+  <link rel="stylesheet" href="./libs/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm text-center">
+        <p class="display-1">Toast</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm">
+        <button class="btn btn-warning" id="btn-checar-email" type="button">Mensagens recebidas</button>
+      </div>
+    </div>
+    <div>
+      <div class="toast-container position-fixed botton-0 end-0 p-3">
+        <div class="toast" id="mensagens-alerta">
+          <header class="toast-header">
+            <h6><strong>Caixa de entrada</strong></h6>
+          </header>
+          <div class="toast-body">
+            <p>Você possui <b>10 mensagens</b> não lidas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./libs/bootstrap.bundle.min.js"></script>
+  <script>
+    const ativadorToast = document.getElementById('btn-checar-email')
+    const mensagem = document.getElementById('mensagens-alerta')
+
+    if (ativadorToast) {
+      ativadorToast.addEventListener('click', function () {
+        const toast = new bootstrap.Toast(mensagem)
+        toast.show()
+      })
+    }
+  </script>
+</body>
+
+</html>
