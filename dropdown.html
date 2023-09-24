@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Dropdown</title>
+  <link rel="stylesheet" href="./libs/bootstrap.min.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <header class="row">
+      <div class="col">
+        <h1 class="display-1">
+          BOOTSTRAP DROPDOWN
+        </h1>
+      </div>
+      <div style="height: 30px; width: 100%;"></div>
+      <hr>
+      <div class="container">
+        <div class="dropdown">
+          <button data-bs-toggle="dropdown" class="btn btn-outline-dark">Menu</button>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li class="dropdown-item"><a class="btn" href="#">Area 1</a></li>
+            <li class="dropdown-item"><a class="btn" href="#">Area 2</a></li>
+            <li class="dropdown-item"><a class="btn" href="#">Area 3</a></li>
+          </ul>
+        </div>
+      </div>
+      <div style="height: 30px; width: 100%;"></div>
+      <hr>
+      <div class="container">
+        <div class="btn-group">
+          <button class="btn btn-outline-dark">Menu 2</button>
+          <button class="btn btn-outline-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"></button>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li class="dropdown-item"><a class="btn" href="#">Area 1</a></li>
+            <li class="dropdown-item"><a class="btn" href="#">Area 2</a></li>
+            <li class="dropdown-item"><a class="btn" href="#">Area 3</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <script src="./libs/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

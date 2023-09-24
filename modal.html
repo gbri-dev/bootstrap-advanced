@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Modal</title>
+  <link rel="stylesheet" href="./libs/bootstrap.min.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <header class="row">
+      <div class="col">
+        <h1 class="display-1">
+          BOOTSTRAP MODAL
+        </h1>
+      </div>
+    </header>
+    <hr />
+    <main class="row">
+      <div class="col-4">
+        <div class="card">
+          <div class="card-header">
+            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exemple-modal">Abrir
+              modal</button>
+          </div>
+          <div class="modal" id="exemple-modal" data-bs-backdrop="static">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="display-4">Título da modal</h5>
+                  <button data-bs-dismiss="modal" class="btn-close" type="button"></button>
+                </div>
+                <div class="modal-body">
+                  <p class="display-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, ipsum.</p>
+                </div>
+                <div class="modal-footer">
+                  <button class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                  <button class="btn btn-success" data-bs-dismiss="modal">Confirmar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card">
+
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card">
+
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="./libs/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const abrirModal = new bootstrap.Modal('#exemple-modal')
+      setTimeout(function () {
+        abrirModal.show()
+      }, 3000)
+    })
+  </script>
+</body>
+
+</html>
